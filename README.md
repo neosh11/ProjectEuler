@@ -24,3 +24,22 @@ def euler2(lim):
         j, i = i+j, j
     return even_sum
 ```
+
+## [Euler 3](https://youtu.be/w3FNOlsoFlM)
+
+```python 
+def euler3(n):
+    primes = [2]
+    maxim, i = 1, 2
+    while i < n:
+        if all(i%p != 0  for p in primes):
+            primes.append(i)
+            if n%i ==0:
+                maxim = i
+                n//=i
+                while n%i ==0:
+                    maxim = i
+                    n//=i
+        i+=1
+    return max(maxim, n)
+```

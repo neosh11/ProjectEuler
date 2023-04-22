@@ -67,3 +67,10 @@ from math import gcd
 def euler5(lim):
     return reduce(lambda x,y: x*y//gcd(x,y),range(2,lim),lim)
 ```
+
+## [Euler 6](https://youtu.be/542cBTbxrsI)
+```python
+def euler6(n):
+    return ((n*(n+1))//2)**2 - (n*(2*n+1)*(n+1))//6
+```
+

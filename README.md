@@ -113,3 +113,20 @@ def euler9(m):
             if a*a+b*b==c*c:
                 return a*b*c
 ```
+
+
+## Euler 10
+```python
+# Sieve of Eratoshenes
+def euler10(m):
+    sm = 2
+    arr = [True]*m
+    for i in range(3,m,2):
+        if not arr[i-1]:
+            continue
+        else:
+            sm+=i
+            for j in range(i-1, m, i):
+                arr[j] = False
+    return sm
+```

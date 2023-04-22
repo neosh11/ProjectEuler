@@ -104,3 +104,13 @@ def euler8(s,n):
             maxp = max(maxp, cprod)
     return maxp
 ```
+## Euler 9
+```python
+def euler9(m):
+    for c in range(1, m):
+        c2 = c*c
+        for a in range(1, (m-c+1)//2):
+            b = m-a-c
+            if a*a+b*b==c2:
+                return a*b*c
+```

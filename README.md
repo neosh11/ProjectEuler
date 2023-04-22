@@ -1,6 +1,6 @@
 # ProjectEuler
 
-I've put video descriptions for every problem too!
+I've put videos for a bunch of problems too!
 
 ## [Euler 1](https://www.youtube.com/watch?v=itbnUmNY2Y4)
 ```python

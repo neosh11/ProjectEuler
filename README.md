@@ -85,3 +85,22 @@ def euler7(n):
         curr +=1
     return primes[-1]
 ```
+
+## Euler 8
+```python
+def euler8(s,n):
+    nz = sum(c == '0' for c in s[:n])
+    cprod = maxp = reduce(lambda x,y:max(1,x)*max(1,y), [int(x) for x in s[:n]] , 1)
+    for i in range(n, len(s)):
+        if s[i-n] == '0':
+            nz-=1
+        else:
+            cprod //= int(s[i-n])
+        if s[i] == '0':
+            nz+=1
+        else:
+            cprod *= int(s[i])
+        if nz == 0:
+            maxp = max(maxp, cprod)
+    return maxp
+```

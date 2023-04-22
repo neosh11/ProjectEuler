@@ -43,3 +43,18 @@ def euler3(n):
         i+=1
     return max(maxim, n)
 ```
+
+## [Euler 4](https://youtu.be/xzM1Hbn6kno)
+```python
+def euler4(x, y):
+    largest = 0
+    for i in range(y, x-1, -1):
+        for j in range(y, x-1, -1):
+            p = i*j
+            if p < largest:
+                break
+            s = str(p)
+            if s[:len(s)//2] == s[-1:-1-len(s)//2:-1]:
+                largest = p
+    return largest
+```

@@ -108,9 +108,8 @@ def euler8(s,n):
 ```python
 def euler9(m):
     for c in range(1, m):
-        c2 = c*c
         for a in range(1, (m-c+1)//2):
             b = m-a-c
-            if a*a+b*b==c2:
+            if a*a+b*b==c*c:
                 return a*b*c
 ```

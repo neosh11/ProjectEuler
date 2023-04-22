@@ -74,3 +74,14 @@ def euler6(n):
     return ((n*(n+1))//2)**2 - (n*(2*n+1)*(n+1))//6
 ```
 
+## [Euler 7](https://youtu.be/FheegdrweTA)
+```python
+def euler7(n):
+    primes = [2]
+    curr = 3
+    while len(primes) < n:
+        if all(curr % p != 0  for p in primes):
+            primes.append(curr)            
+        curr +=1
+    return primes[-1]
+```

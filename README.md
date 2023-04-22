@@ -58,3 +58,12 @@ def euler4(x, y):
                 largest = p
     return largest
 ```
+
+
+
+## [Euler 5](https://www.youtube.com/watch?v=MlucEbNI2jk)
+```python
+from math import gcd
+def euler5(lim):
+    return reduce(lambda x,y: x*y//gcd(x,y),range(2,lim),lim)
+```
